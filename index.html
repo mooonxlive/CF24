@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Festival Schedule 2024</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background: #1a1a1a;
+            color: white;
+        }
+        
+        #countdown {
+            background: #333;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            margin-bottom: 20px;
+            z-index: 100;
+        }
+
+        #next-up {
+            font-size: 0.9em;
+            margin-bottom: 10px;
+        }
+
+        #timer {
+            font-size: 2em;
+            font-weight: bold;
+        }
+        
+        .day {
+            margin-bottom: 40px;
+        }
+        
+        h2 {
+            color: #fff;
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+        }
+        
+        .schedule-item {
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+            position: relative;
+        }
+        
+        .time {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .artist {
+            font-size: 1.2em;
+            margin-bottom: 5px;
+        }
+        
+        .genre {
+            font-size: 0.9em;
+            opacity: 0.8;
+            margin-bottom: 5px;
+        }
+
+        .stage {
+            font-weight: bold;
+            text-transform: uppercase;
+            border-top: 1px solid rgba(0,0,0,0.2);
+            padding-top: 5px;
+        }
+        
+        /* Stage Colors */
+        .harbourflap { background-color: #90EE90; color: black; }
+        .hangseng { background-color: #FFB6C1; color: black; }
+        .park { background-color: #98FB98; color: black; }
+        .electriq { background-color: #87CEEB; color: black; }
+        .robot { background-color: #DDA0DD; color: black; }
+        
+        @media (max-width: 600px) {
+            body {
+                margin: 10px;
+            }
+            
+            .schedule-item {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="countdown">
+        <div id="next-up">Next up: Loading...</div>
+        <div id="timer">Loading...</div>
+    </div>
+
+    <div class="day">
+        <h2>FRIDAY, NOV 29, 2024</h2>
+        <div class="schedule-item park">
+            <div class="time">17:30-18:15</div>
+            <div class="artist">Biscuit (HK)</div>
+            <div class="genre">Strokes indie</div>
+            <div class="stage">Park Stage by Martell</div>
+        </div>
+        <div class="schedule-item hangseng">
+            <div class="time">19:45-20:45</div>
+            <div class="artist">Deca Joins (TW)</div>
+            <div class="genre">Psy-indie</div>
+            <div class="stage">Hang Seng Stage</div>
+        </div>
+        <div class="schedule-item park">
+            <div class="time">20:15-21:00</div>
+            <div class="artist">Hiperson (CN)</div>
+            <div class="genre">Post-punk</div>
+            <div class="stage">Park Stage by Martell</div>
+        </div>
+        <div class="schedule-item harbourflap">
+            <div class="time">21:30-22:45</div>
+            <div class="artist">Air (FR)</div>
+            <div class="genre">Air</div>
+            <div class="stage">Harbourflap Stage</div>
+        </div>
+    </div>
+
+    <div class="day">
+        <h2>SATURDAY, NOV 30, 2024</h2>
+        <div class="schedule-item hangseng">
+            <div class="time">14:30-15:15</div>
+            <div class="artist">Memi (KR)</div>
+            <div class="genre">Riff pop</div>
+            <div class="stage">Hang Seng Stage</div>
+        </div>
+        <div class="schedule-item hangseng">
+            <div class="time">16:00-16:45</div>
+            <div class="artist">Turtle Island (JP)</div>
+            <div class="genre">Taiko punk</div>
+            <div class="stage">Hang Seng Stage</div>
+        </div>
+        <div class="schedule-item park">
+            <div class="time">17:00-17:45</div>
+            <div class="artist">Fat Dog (UK)</div>
+            <div class="genre">Idles meets Underworld</div>
+            <div class="stage">Park Stage by Martell</div>
+        </div>
+        <div class="schedule-item hangseng">
+            <div class="time">17:30-18:15</div>
+            <div class="artist">Fiji Blue (US)</div>
+            <div class="genre">Bedroom-FI</div>
+            <div class="stage">Hang Seng Stage</div>
+        </div>
+        <div class="schedule-item robot">
+            <div class="time">17:45-19:30</div>
+            <div class="artist">Broadback & Re:Flex (HK)</div>
+            <div class="genre">UK Garage anthology</div>
+            <div class="stage">Robot Stage</div>
+        </div>
+        <div class="schedule-item electriq">
+            <div class="time">19:30-21:00</div>
+            <div class="artist">Sim0ne (UK)</div>
+            <div class="genre">Dance/Techno</div>
+            <div class="stage">Electriq Stage</div>
+        </div>
+        <div class="schedule-item harbourflap">
+            <div class="time">20:00-21:00</div>
+            <div class="artist">St Vincent (US)</div>
+            <div class="genre">Alt Rock</div>
+            <div class="stage">Harbourflap Stage</div>
+        </div>
+    </div>
+
+    <div class="day">
+        <h2>SUNDAY, DEC 1, 2024</h2>
+        <div class="schedule-item hangseng">
+            <div class="time">16:15-17:00</div>
+            <div class="artist">Yin Yin (NL)</div>
+            <div class="genre">Riff Psych</div>
+            <div class="stage">Hang Seng Stage</div>
+        </div>
+        <div class="schedule-item harbourflap">
+            <div class="time">16:45-17:45</div>
+            <div class="artist">Ibrahim Maalouf (LEB)</div>
+            <div class="genre">Trumpet Psych</div>
+            <div class="stage">Harbourflap Stage</div>
+        </div>
+        <div class="schedule-item electriq">
+            <div class="time">18:00-19:30</div>
+            <div class="artist">Cami Layé Okún (CU)</div>
+            <div class="genre">Cuban Groove</div>
+            <div class="stage">Electriq Stage</div>
+        </div>
+        <div class="schedule-item hangseng">
+            <div class="time">19:15-20:15</div>
+            <div class="artist">Toe (JP)</div>
+            <div class="genre">Math Gods</div>
+            <div class="stage">Hang Seng Stage</div>
+        </div>
+        <div class="schedule-item harbourflap">
+            <div class="time">20:00-21:00</div>
+            <div class="artist">Glass Animals (UK)</div>
+            <div class="genre">Pop</div>
+            <div class="stage">Harbourflap Stage</div>
+        </div>
+        <div class="schedule-item hangseng">
+            <div class="time">21:00-22:15</div>
+            <div class="artist">Jamie XX (UK)</div>
+            <div class="genre">Dance Legend</div>
+            <div class="stage">Hang Seng Stage</div>
+        </div>
+        <div class="schedule-item harbourflap">
+            <div class="time">21:45-23:00</div>
+            <div class="artist">Jack White (US)</div>
+            <div class="genre">Garage Blues Rock</div>
+            <div class="stage">Harbourflap Stage</div>
+        </div>
+    </div>
+
+    <script>
+        const schedule = [
+            // Friday
+            {date: '2024-11-29 17:30', artist: 'Biscuit (HK)', stage: 'Park Stage'},
+            {date: '2024-11-29 19:45', artist: 'Deca Joins (TW)', stage: 'Hang Seng Stage'},
+            {date: '2024-11-29 20:15', artist: 'Hiperson (CN)', stage: 'Park Stage'},
+            {date: '2024-11-29 21:30', artist: 'Air (FR)', stage: 'Harbourflap Stage'},
+            // Saturday
+            {date: '2024-11-30 14:30', artist: 'Memi (KR)', stage: 'Hang Seng Stage'},
+            {date: '2024-11-30 16:00', artist: 'Turtle Island (JP)', stage: 'Hang Seng Stage'},
+            {date: '2024-11-30 17:00', artist: 'Fat Dog (UK)', stage: 'Park Stage'},
+            {date: '2024-11-30 17:30', artist: 'Fiji Blue (US)', stage: 'Hang Seng Stage'},
+            {date: '2024-11-30 17:45', artist: 'Broadback & Re:Flex (HK)', stage: 'Robot Stage'},
+            {date: '2024-11-30 19:30', artist: 'Sim0ne (UK)', stage: 'Electriq Stage'},
+            {date: '2024-11-30 20:00', artist: 'St Vincent (US)', stage: 'Harbourflap Stage'},
+            // Sunday
+            {date: '2024-12-01 16:15', artist: 'Yin Yin (NL)', stage: 'Hang Seng Stage'},
+            {date: '2024-12-01 16:45', artist: 'Ibrahim Maalouf (LEB)', stage: 'Harbourflap Stage'},
+            {date: '2024-12-01 18:00', artist: 'Cami Layé Okún (CU)', stage: 'Electriq Stage'},
+            {date: '2024-12-01 19:15', artist: 'Toe (JP)', stage: 'Hang Seng Stage'},
+            {date: '2024-12-01 20:00', artist: 'Glass Animals (UK)', stage: 'Harbourflap Stage'},
+            {date: '2024-12-01 21:00', artist: 'Jamie XX (UK)', stage: 'Hang Seng Stage'},
+            {date: '2024-12-01 21:45', artist: 'Jack White (US)', stage: 'Harbourflap Stage'}
+        ];
+
+        function updateCountdown() {
+            const now = new Date();
+            let nextShow = null;
+            
+            // Find the next show
+            for (let show of schedule) {
+                const showTime = new Date(show.date);
+                if (showTime > now) {
+                    nextShow = show;
+                    break;
+                }
+            }
+
+            if (nextShow) {
+                const showTime = new Date(nextShow.date);
+                const timeLeft = showTime - now;
+
+                // Calculate hours, minutes, seconds
+                const hours = Math.floor(timeLeft / (1000 * 60 * 60));
+                const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+                document.getElementById('next-up').innerHTML = 
+                    `Next up: ${nextShow.artist} at ${nextShow.stage}`;
+                document.getElementById('timer').innerHTML = 
+                    `${hours}h ${minutes}m ${seconds}s`;
+            } else {
+                document.getElementById('next-up').innerHTML = 'Festival has ended';
+                document.getElementById('timer').innerHTML = 'See you next year!';
+            }
+        }
+
+        // Update the countdown every second
+        setInterval(updateCountdown, 1000);
+        updateCountdown(); // Initial call
+    </script>
+</body>
+</html>
