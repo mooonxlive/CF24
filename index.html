@@ -135,7 +135,7 @@
         <h2>FRIDAY, NOV 29, 2024</h2>
         <div class="schedule-item park">
             <div class="time">17:30-18:15</div>
-            <div class="artist">Biscuit (HK)</div>
+            <div class="artist">Biascut (HK)</div>
             <div class="genre">Strokes indie</div>
             <div class="stage">Park Stage by Martell</div>
         </div>
@@ -254,7 +254,7 @@
     <script>
         const schedule = [
             // Friday
-            {date: '2024-11-29 17:30', artist: 'Biscuit (HK)', stage: 'Park Stage'},
+            {date: '2024-11-29 17:30', artist: 'Biascut (HK)', stage: 'Park Stage'},
             {date: '2024-11-29 19:45', artist: 'Deca Joins (TW)', stage: 'Hang Seng Stage'},
             {date: '2024-11-29 20:15', artist: 'Hiperson (CN)', stage: 'Park Stage'},
             {date: '2024-11-29 21:30', artist: 'Air (FR)', stage: 'Harbourflap Stage'},
@@ -280,6 +280,35 @@
             const now = new Date();
             let nextShow = null;
             
+            // Update visibility of schedule items
+            const scheduleItems = document.querySelectorAll('.schedule-item');
+            scheduleItems.forEach(item => {
+                try {
+                    const timeDiv = item.querySelector('.time');
+                    const timeStr = timeDiv.textContent.split('-')[0].trim();
+                    const dayHeading = item.closest('.day').querySelector('h2').textContent;
+                    const dateMatch = dayHeading.match(/([A-Z]+)\s+(\d+),\s+(\d+)/i);
+                    
+                    if (dateMatch) {
+                        const [_, month, day, year] = dateMatch;
+                        const monthMap = { 'NOV': 10, 'DEC': 11 };
+                        const [hours, minutes] = timeStr.split(':');
+                        
+                        if (monthMap[month] !== undefined) {
+                            const showDate = new Date(year, monthMap[month], day, hours, minutes);
+                            const hideTime = new Date(showDate.getTime() + 30 * 60000);
+                            
+                            if (now > hideTime) {
+                                item.style.display = 'none';
+                            }
+                        }
+                    }
+                } catch (error) {
+                    console.log('Error processing schedule item:', error);
+                    // Continue with the next item even if there's an error
+                }
+            });
+            
             // Find the next show
             for (let show of schedule) {
                 const showTime = new Date(show.date);
@@ -293,7 +322,6 @@
                 const showTime = new Date(nextShow.date);
                 const timeLeft = showTime - now;
 
-                // Calculate hours, minutes, seconds
                 const hours = Math.floor(timeLeft / (1000 * 60 * 60));
                 const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
                 const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
